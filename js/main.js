@@ -29,17 +29,21 @@ function buttonPress(buttonPress){
     }else{
         isgameOver = true;
     }
+    rollDiceSound.play();
     animationLoop = window.setInterval(rollDice, 30); 
 }
 
 function gameOver(){
-    alert("you scored " + score + " points");
-    reset();
+    title_box.innerHTML = "You lost. Score :" + score;
+    title_box.style.color = "red";
+    window.setTimeout(reset, 1000);
 }
 function reset(){
     score = 0;
+    title_box.style.color = "white";
     score_box.innerHTML = score;    
     isgameOver = false;
+    title_box.innerHTML = "Predict the next value";
 }
 function rollDice(){
     
