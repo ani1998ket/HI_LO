@@ -1,0 +1,46 @@
+*{
+    margin  : 0px;
+    padding : 0px;
+    overflow: hidden;
+}
+
+.gameScreen{
+    display: flex;
+    flex-flow: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background: black;
+    align-items: center;
+    justify-content: space-around;
+}
+header{
+    display: flex;
+    width : 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color : white;
+}
+
+#score{
+    align:center;
+    color : white;
+    font-size: 3rem;
+}
+#dice_box{
+    width: 40%;
+}
+#dice_image{
+    width: 100%;
+    height: 100%;
+}
+button{
+    width : 25vw;
+    height: 8vh;
+    margin: 5vw;
+    padding : 8px;
+    /* border : solid grey; */
+    /* border-radius: 5px; */
+}

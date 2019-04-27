@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src = "js/main.js"></script>
+</head>
+<body>
+    <div class = "gameScreen">
+        <header>
+            <p> Predict the next value</p><br>
+            <div id = "score_box">0</div>
+        </header>
+        
+        <div id = "dice_box">
+            <img  id = "dice_image" src = "res/images/dieRed1.png">
+        </div>
+        <div id = "button_ui">
+            <button id = "btn_high" onclick = "buttonPress(1)">HIGHER</button>
+            <button id = "btn_low"  onclick = "buttonPress(0)">LOWER</button>
+        </div>
+    </div>
+</body>
+</html>
