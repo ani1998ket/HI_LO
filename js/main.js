@@ -14,6 +14,10 @@ let frame = 0;
 let angle = 0;
 let isgameOver = false;
 
+let highScore = getHighScore();
+
+high_score_box.innerHTML = highScore;
+
 reset();
 function buttonPress(buttonPress){
     // diceValue = ((diceValue%6)+6)%6;
@@ -36,9 +40,14 @@ function buttonPress(buttonPress){
 function gameOver(){
     title_box.innerHTML = "You lost. Score :" + score;
     title_box.style.color = "red";
+    if(parseInt(highScore) < score){
+        updateHighScore(score);
+    }
     window.setTimeout(reset, 1000);
 }
 function reset(){
+    highScore = getHighScore();
+    high_score_box.innerHTML = highScore;
     score = 0;
     title_box.style.color = "white";
     score_box.innerHTML = score;    
@@ -65,4 +74,18 @@ function rollDice(){
     dice_image.style.transform = "rotate("+angle+"deg)";
     
     
+}
+
+function getHighScore(){
+    let highScore = localStorage.getItem("HI_LO_high_score");
+    if(highScore != null){
+        return highScore;
+    }
+    else{
+        updateHighScore(0);
+        return 0;
+    }
+}
+function updateHighScore(score){
+    localStorage.setItem("HI_LO_high_score", score);
 }
