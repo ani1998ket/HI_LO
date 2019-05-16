@@ -22,19 +22,41 @@ header{
     justify-content: center;
     align-items: center;
     color : white;
+    justify-content: space-between
 }
 
+#title_box{
+    font-size: 22px;
+    flex: 1 ;
+    padding:10px;
+    margin-bottom: 20px;
+}
+#high_score_box{
+    flex: 1 ;
+}
+.high_score_board{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.score_board{
+    font-size: 22px;
+}
 #score{
     align:center;
     color : white;
     font-size: 3rem;
 }
 #dice_box{
+    display: flex;
     width: 40%;
+    justify-content: center;
 }
 #dice_image{
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height : 20vh;
+    /* max-height: 100%; */
+    max-width: 100%;
+
 }
 button{
     width : 25vw;
